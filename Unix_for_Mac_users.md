@@ -909,7 +909,7 @@ diff is usseful for comparing two files.
 	diff -c oldfile.txt newfile.txt
 #### xargs: Passing argument lists to commands
 
-xargs= Execute as arguments. Parses an input stream into items, then loops through each item in that list and passes it to a command. e.g.
+xargs is short for, execute as arguments. Xargs, parses an input stream into items, then loops through each item in that list and passes it to a command. e.g.
 
 	echo 'file.txt' | xargs wc
 	
@@ -918,3 +918,5 @@ Able to pass multipe arguments
 	echo 'greenfile.txt orangefile.txt' | xargs wc
 
 #### xargs: Usage examples
+
+
