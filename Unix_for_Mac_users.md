@@ -820,7 +820,7 @@ There are 5 different variables that can be configured:
 
 #### Regular expressions: Basic syntax
 
-![Regular Expression Basics](/Users/macuser/Desktop/Screen Shot 2015-06-02 at 1.18.36 PM.png)
+![Regular Expression Basics](/Users/maksim/Desktop/Screen Shot 2015-06-03 at 6.08.29 PM.png)
 
 #### Using regular expresions with grep
 
@@ -834,11 +834,87 @@ There are 5 different variables that can be configured:
 
 #### tr: Deleting and squeezing characters
 
-![tr options](/Users/macuser/Desktop/Screen Shot 2015-06-02 at 3.09.24 PM.png)
+**tr options**
 
+|option|description|
+|---|---|
+|-d|delete characters in listed set|
+|-s|squeeze repeats in listed set|
+|-c|use complementary set|
+|-dc|delete characters not in listed set|
+|-sc|squeeze characters not in listed set
 #### sed: Stream editor
+
+modifies stream of input according to a stream of commands before producing the output.
+
+Most common usage is for doing substitutions.
+
+	sed 's/a/b'
+	
+* s: substitution
+* a: seach string
+* b: replacement string
+
+Different from grep, because it does not execute commands globally. It only changes the first occurence. However, if a user wants to execute commands globally then he would need to add a 'g'. e.g.
+
+	sed 's/a/b/g'
+
+
 #### sed: Regular expressions and back-references
+
+
+
 #### cut: Cutting select text potions
+	
+	cut (-c, -b, -f) (characters) (file name)
+
+	cut -c 1-5 newfile.txt
+
+* b= bytes
+* c= characters
+* f= fields
+
+#### diff: Comparing files
+
+diff is usseful for comparing two files.
+
+	diff oldfile.txt newfile.txt
+	
+* d= deleted
+* a= appended
+* c= changed
+
+**diff comparison options**
+
+|option|description|
+|----|----|
+|-i|case insensitive|
+|-b|ignore changes to blank characters|
+|-w|ignore all whitespace|
+|-B|ignore blank lines|
+|-r|recursively compare directories|
+|-s|show identical files|
+
 #### diff: Alternative formats
+
+**diff output formats**
+
+|option|description|
+|---|---|
+|-c|copied context|
+|-u|unified context|
+|-y|side-by-side|
+|-q|only whether files differ|
+
+	diff -c oldfile.txt newfile.txt
 #### xargs: Passing argument lists to commands
+
+xargs= Execute as arguments. Parses an input stream into items, then loops through each item in that list and passes it to a command. e.g.
+
+	echo 'file.txt' | xargs wc
+	
+Able to pass multipe arguments
+
+	echo 'greenfile.txt orangefile.txt' | xargs wc
+
 #### xargs: Usage examples
