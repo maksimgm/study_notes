@@ -70,14 +70,224 @@ If Statement:
 		// code goes here
 		// ...
 	}
-* All condition must be true or false.
 
-JS's way of checking equality is the `===`. e.g.
+* all condition must be true or false.
 
-	if ( a === 100) {
+-
+
+	if ( a === 100 ) {
 		// code goes here
 		// ...
 		}
+Check inequality using `!=`
+
+	if ( m != 100 ) {
+		// code goes here
+		// ...
+		}
+If else statement:
+
+	if ( m < 100 ) {
+		block of code being executed if m is true
+	} else {
+		block of code being executed if m is false
+	}
+		
+##### Working with Operators
+
+**Arithmetic operators**: + - * /
+
+
+Arithmetic shorthand:
+
+	count +=25;
+	
+	+=	-=	*=	/=
+
+Operator Precedence:	
+	
+	result = 4 + 4 * 3;
+	result = 16
+	
+* follow the order of operations-- perenthesis, multiplication, division, addition, subtraction.
+
+**Operators with =**
+
+* =	*assignment*
+* == *equality*
+* === *strict equality*
+
+Equality v. Strict Equality:
+
+		var a = 10;
+		var b = "10";
+	
+	if ( a == b ) {
+		alert( "Yes, they are equal");
+	}  else {
+		alert( "They are not equal");
+	}
+	
+	RESULT: Yes, they are equal
+	
+		var a = 10;
+		var b = "10";
+	
+	if ( a === b ) {
+		alert( "Yes, they are equal");
+	}  else {
+		alert( "They are not equal");
+	}	
+
+	RESULT: They are not equal
+
+**Logical And / OR**
+
+	if ( a == b   &&   c == d) { ...
+	
+	if ( a == b   ||   c == d) { ...
+	
+**Modules**
+
+	var year = 2003;
+	var remainder = year % 4; // remainder is 3
+	
+**Increment / Decrement**
+
+	a = a +2;
+	a += 2;
+	a++;
+	++a;
+* all of the above are equal.
+
+**Prefix / Postfix**
+
+	var a = 3;
+	alert( ++a );
+		
+	Value of a will change to 4. Result is 4.
+	
+	var a = 3;
+	alert( a++ );	
+	
+	Value of a will be 3. Result is 3.
+	
+**Ternary Operator**
+
+	condition ? true : false 
+-
+
+	var playerOne = 15;
+	var playerTwo = 20;
+	
+	// sometime later
+	var highScore;
+	
+	if ( playerOne > playerTwo ) {
+		highScore = playerOne;
+	}
+	else {
+		highScore = playerTwo;
+	}
+
+Alternatively, a ternary operator allows you to simplify this code. e.g.
+	
+	var playerOne = 15;
+	var playerTwo = 20;
+	
+	( playerOne > playerTwo ) ? playerOne : playerTwo;
+	
+##### Sending Messages to the console
+
+		var foo = 1;
+		var bar = 2;
+	
+	if ( foo < bar ) {
+		consol.log( "foo is less than bar" );
+		console.log( "foo");
+		console.log( "bar" );
+	}
+	
+* As opposed to using `alert`, `console.log` will display the script in your console, instead of displaying an alert. 
+	
+##### Working with Loops
+
+Loops can execute a block of code a number of times. They are handy, if you want to run the same code over and over again, each time with a different value.
+
+Javascript support different kinds of loops:
+
+**while** - loops through a block of code while a specified condition is true. e.g.
+
+		var a = 2;
+		
+		while	( a < 11 ) {
+			console.log(a);
+		}
+* this is an infinite loop.
+
+		var a = 2;
+		
+		while	( a < 11 ) {
+			console.log(a);
+			a++;
+		}
+* The value of `a` will increase by 1 after each loop.
+				
+**do/while** - also loops through a block of code while a specified condition is true.
+
+		var a = 15;
+	
+		do {
+			console.log (a);
+			a++;	
+		} while	( a < 11 );
+
+* the main difference between *while loop* and *do/while* is, the *do/while loop* will always be executed at least once, whether it is true or false.
+
+**for** - loops through a block of code a number of times.
+
+	for ( var i = 2; i < 10 ; i++ ) {
+		// do stuff
+		// do stuff
+		// do stuff
+		// etc...
+	}
+* *for loop* consists of three elements
+	* setup index e.g.
+		* `var i = 2`
+	* check condition e.g.
+		* `i < 10`
+	* increment index e.g.
+		* `i++`
+		
+**for/in** - loops through the properties of an object.
+
+**Break**
+
+	for ( var i = 2; i < 300 ; i++ ) {
+		// do stuff
+		// do stuff
+		if ( i == 100) {
+			break;
+		}
+		 // do stuff
+		}
+		
+		// break jumps out of loop
+		
+**Continue**
+
+	for ( var i = 2; i < 300 ; i++ ) {
+		// do stuff
+		// do stuff
+		if ( i == 100) {
+			continue; // done with iteration
+		}
+		 // do second set of stuff
+		}
+		
+		// continue moves us back to the top
+
 
 ### Types and Objects
 
