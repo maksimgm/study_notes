@@ -36,19 +36,48 @@ Add comments e.g.
 
 ###### Where to put JS
 
-Using inline JS in your HTML is a problem when working with long HTML documents, because your code becomes fragmented. Instead, make a JS tab in your text editor, like you would with HTML or CSS. Keep the <script> tag in HTML and add the <src> tag to link up to your script.js tab. The script.js tab does not require a <script> tag.
+Using inline JS in your HTML is a problem when working with long HTML documents, because your code becomes fragmented. Instead, make a JS tab in your text editor, like you would with HTML or CSS. Keep the 'script' tag in HTML and add the 'src' tag to link up to your script.js tab. The script.js tab does not require a 'script' tag.
 
 ####### Location of the Script Tag
  
- Place the script tag at the end of your body section. 
+Place the script tag at the end of your body section. 
 
 ##### Variables
 
 A variable is a container. You create it, name it, and apply a  value to it. Varibles can contian: letters, numbers, _, and $. Be mindful that you cannot start with a number.
 
-	var food;
+###### Variable examples:
+
+	var pizza;
+	pizza = cheese;
+OR
 	
- 1:58 time
+	var pizza = cheese;
+-
+	
+	var almonds;		
+	var cashews;
+	var peanuts;
+=
+
+	var almonds, month, day;
+	
+###### Working with conditional code
+
+If Statement:
+
+	if ( condition ) {	
+		// code goes here
+		// ...
+	}
+* All condition must be true or false.
+
+JS's way of checking equality is the `===`. e.g.
+
+	if ( a === 100) {
+		// code goes here
+		// ...
+		}
 
 ### Types and Objects
 
