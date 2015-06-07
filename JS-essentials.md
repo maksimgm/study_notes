@@ -128,7 +128,7 @@ Equality v. Strict Equality:
 		alert( "They are not equal");
 	}
 	
-	RESULT: Yes, they are equal
+	RESULT: Yes, they are equal.
 	
 		var a = 10;
 		var b = "10";
@@ -139,7 +139,7 @@ Equality v. Strict Equality:
 		alert( "They are not equal");
 	}	
 
-	RESULT: They are not equal
+	RESULT: No, they are not equal.
 
 **Logical And / OR**
 
@@ -288,21 +288,91 @@ Javascript support different kinds of loops:
 		
 		// continue moves us back to the top
 
+###### Functions
 
-### Types and Objects
+A Javascript function is a block of code designed to perform a particular task. e.g.
+
+	function createGreeting	() {
+		console.log("Hello World");
+		// loops, if statements, anything!
+		// ...
+	}
+	
+	// sometime later
+	createGreeting ();
+	
+* the function name has to be one word and you may not use letters.
+* if it's in a function, it won't run uless you call it.
+
+**Where to Declare Functions**
+
+Declare your functions before you call them. e.g.
+
+	function myFunction () {
+		//lots of code
+	}
+	function myOtherFunction () {
+		//lots of code
+		myFunction ();
+		}
+	
+	myFunction();
+	
+**Functions With Parameters**
+
+					    parameters
+	function myFunction ( x,y ) {
+		var myVar = x * y;
+		console.log(myVar);
+		// we can return values
+		return myVar;
+	}
+	myFunction(75,12);
+	myFunction(35,82);
+	var myresult = myFunction(4,2);
+	
+**Parameter Mismatch**
+
+
+	function calculateLoan ( amount, months, 				
+		interest, name) {
+		// lots of code
+	}
+
+	
+	calculateLoan (1000, 60, 9, "Jon Smith");
+
+
+
+#### Types and Objects
+
+##### Working with arrays
+
+array is a single variable that holds multiple values.
+
+	var multipleValues= [] ;
+	
+	multipleValues [0] = 20;
+	multipleValues [1] = 30;
+	multipleValues [2] = 40;
+
+##### Working with numbers
+
+
+
+##### Working with strings
+
+
+
+##### Working with dates
+
+
+
+##### Working with objects
+
 
 
 
 ### Understanding and Working the Document Object Model
 
 
-
-### Working with Events 
-
-
-
-
-###
-###
-###
-###
