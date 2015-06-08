@@ -212,7 +212,7 @@ Alternatively, a ternary operator allows you to simplify this code. e.g.
 	
 ##### Working with Loops
 
-Loops can execute a block of code a number of times. They are handy, if you want to run the same code over and over again, each time with a different value.
+Loops can execute a block of code a number of times. They are handy, if you want to run the same code over and over again, but with a different value each time.
 
 Javascript support different kinds of loops:
 
@@ -377,6 +377,38 @@ Arrays are everywhere in JS.
 
 ##### Working with numbers
 
+All JS numbers are 64-bit floating point numbers.
+
+Addition v. Concatenation
+
+	var foo = 5;
+	var bar = 5;
+	console.log( foo + bar ); // 10
+	
+	var foo = "5";
+	var bar = "5";
+	console.log( foo + bar ); // 55
+	
+	var foo = 5;
+	var bar = "5";
+	console.log( foo + bar ); // 55- one is a string
+	
+	var foo = 5;
+	var bar = "b";
+	console.log( foo * bar ); // NaN
+	
+* NaN- Not a number. This is a special meaning in JS. JS is telling you that the expression does not make sense.
+
+**Using Math Objects**
+
+	var x = 200.6;
+	var y = Math.round(x); // 201
+	
+	var a = 200, var b = 10000, c = 4;
+	var biggest = Math.max(a,b,c);
+	var smallest = Math.min(a,b,c);
+	
+	Math.PI     Math.random()     .sqrt()     .log()
 
 
 ##### Working with strings
