@@ -413,12 +413,112 @@ Addition v. Concatenation
 
 ##### Working with strings
 
+	var myString = "Double quotes work.";
+	var myString = 'Single quotes work too.';
+	var myString = 'One or the other.";
 
+	var phrase = 'Don't mix your quotes.';
+	//Wrong
+	var phrase = "Don't mix your quotes.";
+	//Right
+	
+	var phrase = "He said "that's fine," and left.";
+	//Wrong
+	var phrase = "He said \"that's fine,\" and left.";
+	//Right. This tells JS not to close your script
+	
+**Properties**
+
+Strings can be treated as objects, because they have information we can ask of them. 
+
+	var phrase = "This is a simple phrase.";
+	console.log(phrase.length); // 24
+
+**Methods**
+
+	var phrase = "This is a simple phrase.";
+	console.log(phrase.toUpperCase() );
+		// THIS IS A SIMPLE PHRASE
+		
+	var phrase = "This is a simple phrase.";
+	var words = phrase.split (" "); e.g.
+	
+|Array|phrase|	
+|------|-------|
+|0 |This|
+|1|is|
+|2|a|
+|3|simple|
+|4|phrase.|
+
+
+	var phrase = "We want a groovy keyborad.";
+	var position = phrase.indexOf ("groovy"); // 10
+	
+	//it returns 0 if term is found at the begining
+	// it returns -1 if the term is not found
+	
+	if ( phrase.indexOf("AAAA") == -1) {
+		console/log("That word does not occur.");
+	}
+	
+	var phrase = "Yet another phrase.";
+	
+	var segment = phrase.slice(6,11); //makes new string with characters between 6-11.
+
+	// slice does not change the original string
+	
+String Comparision
+
+	var string1 = "Hello";
+	var string2 = "hello";
+	
+	//string1 != string2
+	
+String Reference
+
+[JS Reference](http://developer.mozilla.org/en/JavaScript/Reference)	
 
 ##### Working with dates
 
+	var today = new Date (); // current date and time
+	
+	var y2k = new Date(2000,0,1);
+				// year, month, day
+				
+	var y2k = new Date(2000,0,1,0,0,0);
+	// year, month, day, hours, minutes,seconds
+	
+**Get Method of the Date Object**
 
+	var today = new Date();
+	
+	today.getMonth(); // returns 0-11
+	today.getFullYear(); // YYYY (not zero-based)
+	today.getDate(); // 1-31 day of month
+	today.getDay(); // 0-6 day of the week. 0 == sunday
+	today.getHours(); // 0-23
+	today.getTime(); // milliseconds since 1/1/1970
 
+**Set Method of the Date Object**
+
+	var today = new Date();
+	
+	today.setMonth(5);
+	today.setFullYear(2013);
+	today.setDay(0);
+	// etc.
+	
+**Comparing Dates**
+
+	var date1 = new Date(2000,0,1);
+	var date2 = new Date(2000,0,1);
+	
+	if ( date1 == date2 ) { ... //false!
+	
+	if ( date1.getTime() == date2.getTime() ) { ...
+	// true!
+	
 ##### Working with objects
 
 
