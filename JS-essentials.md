@@ -348,13 +348,32 @@ Declare your functions before you call them. e.g.
 
 ##### Working with arrays
 
-array is a single variable that holds multiple values.
+Array is a single variable that holds multiple values. They are zero based. Additionally, they are very dynatmic, meaning they can easily be changed.
 
 	var multipleValues= [] ;
 	
 	multipleValues [0] = 20;
 	multipleValues [1] = 30;
 	multipleValues [2] = 40;
+	
+	Shorthand:
+	
+	var multipleValues = [ 20,30,40 ];
+							[0][1][2]
+							
+**Array Properties**
+
+	console.log (multipleValues.length); length is 5
+
+	* sets length
+
+**Array Methods**
+
+Methods are functions that belong to an object. Arrays have built in methods. e.g. `.join`, `.sort`, and `.reverse`. Arrays are objects means that we can ask them to do useful things. 
+
+Arrays are everywhere in JS. 
+
+
 
 ##### Working with numbers
 
