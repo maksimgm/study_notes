@@ -5,9 +5,10 @@ Javascript Essentials
 
 Javascript is a programming language that runs in tandem CSS and HTML. It's primary function is controlling the behavior of the page. JS is refered to as a scripting language; it runs in a web browser. Additionally, it is a client-side language. The script is sent to the clients browers, unlike a server side language which is sent to a server.
 
-Because of the popularity of JS, server side platforms such as, Node.js have been developed. 
+Because of JS's, server side platforms such as, Node.js have been developed in recent years
 
-Use whatever text editor already using. Most text editors support JS.
+Use whatever text editor you are already using. Most text editors support JS.
+
 ######Simple Javascript:
 
 	<script>
@@ -73,18 +74,18 @@ If Statement:
 
 * all condition must be true or false.
 
--
+.
 
 	if ( a === 100 ) {
 		// code goes here
 		// ...
-		}
+	}
 Check inequality using `!=`
 
 	if ( m != 100 ) {
 		// code goes here
 		// ...
-		}
+	}
 If else statement:
 
 	if ( m < 100 ) {
@@ -165,17 +166,17 @@ Equality v. Strict Equality:
 	var a = 3;
 	alert( ++a );
 		
-	Value of a will change to 4. Result is 4.
+	Value of 'a' will change to 4. Result is 4.
 	
 	var a = 3;
 	alert( a++ );	
 	
-	Value of a will be 3. Result is 3.
+	Value of 'a' will be 3. Result is 3.
 	
 **Ternary Operator**
 
 	condition ? true : false 
--
+
 
 	var playerOne = 15;
 	var playerTwo = 20;
@@ -223,7 +224,9 @@ Javascript support different kinds of loops:
 		while	( a < 11 ) {
 			console.log(a);
 		}
-* this is an infinite loop.
+		
+		//this is an infinite loop.
+		
 
 		var a = 2;
 		
@@ -521,9 +524,129 @@ String Reference
 	
 ##### Working with objects
 
+Object gathers data into a container. 
+
+**Object Creation**
+
+	var player = new Object ();
+	player.name = "Lenny";
+	player.score = 1000;
+	player.rank =  1;
+
+Shorthand	
+
+	var player1 = { name: "Lenny", score: 1000, rank: 1 };
+	
+	
+player.name, player.score, and player.rank are properties inside of the object. Properties are variables that belongs to an object.
 
 
 
 ### Understanding and Working the Document Object Model
 
+DOM- A platform and language-neutral interface that allows programs and scripts to dynamicallyaccess and update the content, structure, adn style of a document.
+
+document- The web page is the document
+
+object- Anything that makes sense to treat as an individual piece. 
+
+model- A set of standards.
+
+**What You Can Do With DOM**
+
+* Get the title text
+* Get the second paragraph
+* Get the third link in the menu and set its CSS to disply: none;
+* Change the background color of all paragraphs with a class of "important"
+* Get all the <li> elements in the last unordered list 
+* Find the image with an id of "logo" and move it 40px to the right
+* Change a link so it performs a JS function when clicked
+* Create a new unordered list and insert between first and second paragraphs
+
+##### Nodes and Elements
+
+**Node Types**
+
+Node.ELEMENT_NONE == 1
+Node.ATTRIBUTE_NODE == 2
+Node.TEXT_NODE == 3
+
+
+![elements, attributes, and text node](/Users/maksim/Desktop/Screen Shot 2015-06-09 at 12.10.38 PM.png)
+
+* element notes do not contain text.
+
+###### Accessing DOM elements
+
+Grab an HTML id e.g.
+
+	document.getElementById("someId");
+
+Retrieving an Element by id
+
+	var myElement = document.getElementById("abc");
+
+* pathway into the HTML doc, not only the specified id.
+
+Retrieve multiple elements
+
+	var myListItems = document.getElementsByTagName ("li");
+
+###### Changing DOM elements
+
+**Working with Attributes**
+
+	myElement.getAttribute( "align" );
+
+	myElement.setAttribute( "align","right" );
+	
+###### Creating DOM elements
+
+1. create the element
+	
+		var newHeading = document.createElement("h1");
+		var newParagraph = document.createElement("p")
+
+		
+		//add content:
+		
+		newHeading.innerHTML = "Did You Know?";
+		
+		newParagraph.innerHTML = "California has been in a severe drought for the past five years!";
+2. add it to the document
+
+		document.getElementById("trivia").appendChild(newHeading);
+		document.getElementById("trivia").appendChild(newParagraph);
+		
+##### Working with Events and Event Listeners 
+
+**What is an event?**
+
+Events are things that hapen to HTML elements. When JS is used in HTML pages, JS can "react" on these events.
+		
+**Handling Events: Method 1**
+
+	<button onclick="alert('Hello, world');">
+		Run Some Javascript
+	</button>
+	
+	This is not the prefered method
+
+**Handling Events: Method 2**
+
+	myelement.onclick = function() {
+		// your event handler code
+		// ...
+		// ...
+	};
+	
+**Handling Events: Method 3**
+
+	document.adEventListener('click', myFunction, false);
+	
+	benefit: you can add a listener to multiple events
+	
+	drawback: few areas where there is still a difference between the browsers.
+	
+###### Working with onClick and onLoad events
 
