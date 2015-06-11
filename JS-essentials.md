@@ -613,6 +613,7 @@ Retrieve multiple elements
 		newHeading.innerHTML = "Did You Know?";
 		
 		newParagraph.innerHTML = "California has been in a severe drought for the past five years!";
+
 2. add it to the document
 
 		document.getElementById("trivia").appendChild(newHeading);
@@ -648,5 +649,22 @@ Events are things that hapen to HTML elements. When JS is used in HTML pages, JS
 	
 	drawback: few areas where there is still a difference between the browsers.
 	
-###### Working with onClick and onLoad events
+##### Debugging JS
+
+###### Common Errors
+
+Undefined function
+
+	function myFunction() {
+		consol.log("you called myFunction")
+	}
+	
+	window.onLoad = function () {
+		myfunction();
+	}
+	
+	Calling a function that does not exist  is a common error. Remember JS is case sensitive.
+
+
+
 
