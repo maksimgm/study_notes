@@ -376,8 +376,74 @@ Methods are functions that belong to an object. Arrays have built in methods. e.
 
 Arrays are everywhere in JS. 
 
+**Adding Elements to an Array**
 
+Add elements to an array using `.push` e.g.
 
+	var animals = [];
+	animals.push("Elepahant");
+	animals.push("Tiger");
+	animals.push("Zebra");
+	animals.push("Lion");
+	
+	animals;
+	["Elephant", "Tiger", "Zebra", "Lion"]
+	animals.length;
+	4
+	
+To add an element to the beginning of an array use `.unshift(element)` e.g.
+
+	animals;
+	["Elephant", "Tiger", "Zebra", "Lion"]
+	animals[0];
+	"Elephant"
+	animals.unshift.("Cheetah");
+	
+	animals;
+	["Cheetah", "Elephant", "Tiger", "Zebra", "Lion"]
+	animals[0];
+	"Cheetah"
+	animals[1];
+	"Elephant"
+
+**Removing Elements from an Array**
+
+	animals;
+	["Cheetah", "Elephant", "Tiger", "Zebra", "Lion"]
+
+	var lastAnimal = animals.pop(); lastAnimal;
+	"Lion"
+	animals;
+	["Cheetah", "Elephant", "Tiger", "Zebra",]
+
+In order to remove the first item of an array use `.shift(element)`
+
+	animals;
+	["Cheetah", "Elephant", "Tiger", "Zebra", "Lion"]
+	var firstAnimal = animals.shift(); firstAnimal;
+	"Cheetah"
+	
+	animals;
+	["Elephant", "Tiger", "Zebra", "Lion"]
+	
+**Adding Arrays**
+
+To add two arrays together use, `firstArray.concat(otherArray)`;
+
+	
+	var animals = ["Cheetah", "Elephant", "Tiger"];
+	var food = ["pizza", "fruits", "vegetables"];
+	
+	var animalsAndFood = animals.concat(food);
+	animalsAndFood;
+	["Cheetah", "Elephant", "Tiger", "pizza", "fruits", "vegetables"]
+	
+**Finding the index of an Element**
+
+	var food = ["pizza", "fruits", "vegetables"];
+	food.indexOf("fruits");
+	1
+	
 ##### Working with numbers
 
 All JS numbers are 64-bit floating point numbers.
